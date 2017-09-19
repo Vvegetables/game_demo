@@ -1,0 +1,41 @@
+package zcx;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/**
+ * @author home
+ *
+ */
+public class Demo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int count = sc.nextInt();
+		
+		Map<Integer,Integer> treeMap = new TreeMap<Integer,Integer>();
+		int key = 0,value = 0;
+		for(int i = 0; i < count; i++){
+			key = sc.nextInt();
+			value = sc.nextInt();
+			if(treeMap.containsKey(key)){
+				treeMap.put(key,treeMap.get(key) + value);
+			}else{
+				treeMap.put(key, value);	
+			}
+		}
+		
+		//System.out.println(treeMap);
+		//±éÀú
+		for(Map.Entry<Integer, Integer> entry : treeMap.entrySet()){
+			System.out.println(entry.getKey() + " " + entry.getValue());
+		}
+
+		
+	}
+
+}

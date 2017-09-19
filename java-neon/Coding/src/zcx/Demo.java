@@ -1,0 +1,81 @@
+package zcx;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/*
+ * 数素数
+ * 输出第m-第n之间的素数
+ * param：m，n
+ */
+
+
+/**
+ * @author home
+ *
+ */
+public class Demo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int m = sc.nextInt();
+		int n = sc.nextInt();
+		int index = 0;
+		int[] result = new int[n];
+		int num = 2;
+		while(index <= n - 1){
+			//System.out.println(num);
+			if(isSushu(num, index, result)){
+				index ++;
+			}
+			num++;			
+		}
+//		for(int i : result){
+//			System.out.println(i);
+//		}
+		for(int i = m - 1; i < n - 1; i++){
+			if((i - m + 2) % 10 == 0)
+				System.out.println(result[i]);
+			else{
+				System.out.print(result[i] + " ");
+			}
+		}
+		System.out.println(result[n - 1]);				
+	}
+	
+	public static boolean isSushu(int num,int index,int[] result){
+		
+		if(num >= 10){
+			int temp = num % 10;
+			switch(temp){
+			case 2:
+			case 5:
+				return false;
+			}
+		}else{			
+			switch(num){
+			case 2:
+			case 3:
+			case 5:
+			case 7:
+				//System.out.println("in:" + num);				
+				result[index] = num;
+				return true;				
+			}
+		}		
+		//boolean flag = true;
+		for(int i = 2; i <= Math.sqrt(num); i++){
+			if(num % i == 0){
+				//flag = false;
+				return false;
+			}
+		}
+		result[index] = num;
+		//System.out.println("in:" + num);
+		return true;		
+	}
+}

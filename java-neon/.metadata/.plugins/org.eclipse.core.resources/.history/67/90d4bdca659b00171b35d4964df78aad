@@ -1,0 +1,29 @@
+package zcx;
+import java.util.Scanner;
+
+/**
+ * @author home
+ *
+ */
+public class Demo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		char[] in = sc.nextLine().toCharArray();
+		int lastSpace = -1;
+		for(int i = 0; i < in.length; i++){
+			if(in[i] == ' '){
+				lastSpace = i;
+			}
+		}
+		System.out.println(in.length - lastSpace - 1);
+
+
+		
+	}
+
+}

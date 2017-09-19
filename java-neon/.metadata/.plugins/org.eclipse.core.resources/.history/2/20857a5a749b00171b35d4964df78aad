@@ -1,0 +1,44 @@
+package zcx;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/**
+ * @author home
+ *
+ */
+public class Demo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int[] arr = new int[10];
+		int index = 0,temp = 0;
+		boolean flag = true;
+		while(num >= 0){
+			 temp = num % 10;
+			 System.out.println(num);
+			 for(int i : arr){
+				if(i == temp){
+					flag = !flag;
+				}
+			 }
+			 if(flag){
+				 arr[index++] = temp;
+			 }
+			 num /= 10;
+		}
+		int sum = 0;
+		for(int i : arr){
+			sum = (sum + i) * 10;
+		}
+		sum /= 10;
+		System.out.println(sum);
+		
+	}
+
+}

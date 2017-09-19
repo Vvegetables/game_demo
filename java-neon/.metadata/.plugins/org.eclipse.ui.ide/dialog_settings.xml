@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="workingset_selection_history">
+		<item value="watermark2"/>
+	</list>
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\computerScience\代码包\watermark-master"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\computerScience\Book.pdf\websocket\websocket_demo\Eclipse\Game-Site"/>
+			<item value="C:\Users\home\Desktop\websocket\websocket_demo\Eclipse\Game-Site"/>
+			<item value="C:\Users\home\Desktop\websocket\websocket_demo\Eclipse\Customer-Support-v8"/>
+			<item value="C:\Users\home\Desktop\新项目二期\java视频上传播放\MediaPlayer"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1483450968839" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+</section>

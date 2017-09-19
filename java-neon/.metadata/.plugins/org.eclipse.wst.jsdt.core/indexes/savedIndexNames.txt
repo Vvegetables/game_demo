@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\´úÂë¿â\java-neon\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+186346345.index
+781719357.index
+3004778876.index
+2244369048.index
+3785166835.index
+4214702706.index
