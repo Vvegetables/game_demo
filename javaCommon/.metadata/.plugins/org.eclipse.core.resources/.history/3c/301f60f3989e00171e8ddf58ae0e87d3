@@ -1,0 +1,44 @@
+package collections;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+/**
+ * 
+ * Set集合中的元素是唯一的，不可重复（取决于hashCode和equals方法），也就是说具有唯一性。
+ * Set集合中元素不保证存取顺序，并不存在索引。
+继承关系
+Collection
+    |--Set：元素唯一，不保证存取顺序，只可以用迭代器获取元素。
+        |--HashSet：哈希表结构，非线程安全，查询速度较快。元素唯一性取决于hashCode和equals方法。
+            |--LinkedHashSet：带有双向链表的哈希表结构，非线程安全，保持存取顺序，保持了查询速度较快特点。
+        |--TreeSet：平衡排序二叉树（红黑树）结构，非线程安全，按自然排序或比较器存入元素以保证元素有序。
+                    元素唯一性取决于ComparaTo方法或Comparator比较器。
+常用方法
+Set集合的方法和Collection集合的方法几乎一致。
+ * 
+ *
+ */
+
+public class HashSetDemo {
+
+	public static void main(String[] args) {
+		//Set集合保证元素唯一性
+		Set<String> set = new HashSet<String>();
+		System.out.println("此时hashset的容量：" + set.size());
+		set.add("a");
+		set.add("b");
+		set.add("c");
+		set.add("a");
+		System.out.println("添加元素之后hashset的容量：" + set.size());
+		
+		//遍历
+		for(Iterator<String> iterator = set.iterator(); iterator.hasNext();){
+			System.out.println("set的值：" + iterator.next());
+			
+		}
+		System.out.println("-------------------");
+	}
+
+}

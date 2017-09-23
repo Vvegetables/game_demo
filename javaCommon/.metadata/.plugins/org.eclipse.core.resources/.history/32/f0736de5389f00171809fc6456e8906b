@@ -1,0 +1,30 @@
+package pat;
+
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class P1001 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		for(int i = 0; i < num; i++){
+			
+			int first = sc.nextInt();
+			int second = sc.nextInt();
+			int third = sc.nextInt();
+			BigDecimal bf = new BigDecimal(first);
+			BigDecimal bs = new BigDecimal(second);
+			BigDecimal bt = new BigDecimal(third);
+			if(bf.add(bs).subtract(bt).equals(0)){
+				System.out.println("Case #" + (i + 1) + ": true");
+			}else{
+				System.out.println("Case #" + (i + 1) + ": false");
+			}
+			
+		}
+		System.out.println(-2147483648 + -2147483648);
+	}
+
+}

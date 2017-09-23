@@ -1,0 +1,17 @@
+package collections;
+
+/**
+ * Set集合中的元素是唯一的，不可重复（取决于hashCode和equals方法），也就是说具有唯一性。
+Set集合中元素不保证存取顺序，并不存在索引。
+ * @author home
+ *
+ */
+
+public class HashSet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

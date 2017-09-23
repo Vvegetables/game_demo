@@ -1,0 +1,56 @@
+package pat;
+
+import java.util.Scanner;
+
+class StuStruct{
+	private int id;
+	private int lScore;
+	private int hScore;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getlScore() {
+		return lScore;
+	}
+	public void setlScore(int lScore) {
+		this.lScore = lScore;
+	}
+	public int gethScore() {
+		return hScore;
+	}
+	public void sethScore(int hScore) {
+		this.hScore = hScore;
+	}
+	public StuStruct(int id, int lScore, int hScore) {
+		super();
+		this.id = id;
+		this.lScore = lScore;
+		this.hScore = hScore;
+	}
+	
+}
+
+public class P1005 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int count = sc.nextInt();
+		int lScore = sc.nextInt();
+		int hScore = sc.nextInt();
+		for(int i = 0; i < count; i++){
+			int stuId = sc.nextInt();
+			int stuLScore = sc.nextInt();
+			int stuHScore = sc.nextInt();
+			
+			if(stuLScore >= lScore){
+				
+			}
+		}
+
+	}
+
+}
