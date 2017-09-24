@@ -1,0 +1,49 @@
+package pat;
+
+import java.util.Scanner;
+
+public class P1023 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		char[] wrong = sc.nextLine().toCharArray();
+		boolean noUp = false;
+		char[] output = sc.nextLine().toCharArray();
+		for(int i = 0; i < wrong.length; i++){
+			if('+' == wrong[i]){
+				noUp = true;
+			}
+			for(int j = 0; j < output.length; j++){
+				if(Character.isLetter(wrong[i])){
+					if(Character.toUpperCase(wrong[i]) == Character.toUpperCase(output[j])){
+						output[j] = '?';
+					}
+				}else{
+					if(wrong[i] == output[j]){
+						output[j] = '?';
+					}
+				}
+			}
+		}
+		
+		
+		if(!noUp){
+			for(int i = 0; i < output.length; i++){
+				if(output[i] != '?'){
+					System.out.print(output[i]);
+				}
+				
+			}
+		}else{
+			for(int i = 0; i < output.length; i++){
+				if(output[i] != '?'){
+					System.out.print(Character.toLowerCase(output[i]));
+				}
+			}
+			
+		}
+		
+
+	}
+
+}

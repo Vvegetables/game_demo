@@ -2,6 +2,7 @@ package pat;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.Set;
 
 class Stu{
@@ -68,44 +69,16 @@ class Stu{
 public class Test {
 
 	public static void main(String[] args) {
-		Set<Stu> set = new HashSet<Stu>();
-		Stu max = new Stu(1,1,1);
-		set.add(new Stu(2,222,222));
-		set.add(new Stu(1,1,1));
-		Stu kk = null;
-		Iterator<Stu> it = set.iterator();
-		Iterator<Stu> is = null;
-//		while(it.hasNext()){
-//			System.out.println(it.next());
-//		}
-		//set.remove(max);
-		it = set.iterator();
-		while(it.hasNext()){
-//			max.setId(2);
-//			max.setlScore(1222);
-//			max.sethScore(1);
-			if(set.contains(max)){
-				kk = it.next();is = it;
-				it.remove();
-			}
-				
-			
-			System.out.println(kk);
-			//it.remove();
-			//System.out.println();
+		Scanner sc = new Scanner(System.in);
+		byte[] test = new byte[10000];
+		int index = 0;
+		while(sc.hasNextByte()){
+			test[index] = sc.nextByte();
+			++index;
 		}
-		System.out.println(max);
-		is.remove();
-		it = set.iterator();
-//		while(it.hasNext()){
-////			max.setId(2);
-////			max.setlScore(1222);
-////			max.sethScore(1);
-//			//System.out.println(set.contains(max));
-//			System.out.println(it.next());
-//			//it.remove();
-//			//System.out.println();
-//		}
+		for(int i = 0; i < index; i ++){
+			System.out.println(test[i]);
+		}
 	}
 
 }

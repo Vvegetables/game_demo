@@ -1,0 +1,22 @@
+package pat;
+
+import java.util.Scanner;
+
+public class P1022 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int count = sc.nextInt();
+		int[] result = new int[count];
+		int resultIndex = 0;
+		int group,score;
+		for(int i = 0; i < count; i++){
+			group = sc.nextInt();
+			score = sc.nextInt();
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,61 @@
+package pat;
+
+import java.util.Scanner;
+
+/**
+ * String -> int(Integer.parse(String))
+ * @author home
+ *
+ */
+
+public class P1024 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		String first = sc.nextLine();
+		String second = sc.nextLine();
+		String[] firstF = first.split("/");
+		String[] secondF = second.split("/");
+		
+		int firInt = Integer.parseInt(firstF[0]);
+		int fir_fenInt = Integer.parseInt(firstF[1]);
+		
+		int secInt = Integer.parseInt(secondF[0]);
+		int sec_fenInt = Integer.parseInt(secondF[1]);
+		
+		//第一个数字的最简形式
+		
+		int maxTemp1 = maxNum(firInt,fir_fenInt);
+		
+		int jia = firInt / fir_fenInt;
+		int fen = (firInt % fir_fenInt) / maxTemp1;
+		//第二个数字的最简形式
+		
+		int maxTemp2 = maxNum(secInt,sec_fenInt);
+		int jia2 = secInt / sec_fenInt;
+		int fen2 = (secInt % sec_fenInt) / maxTemp2;
+		
+		//加法
+		//1.通分
+		int maxTemp = maxNum(fir_fenInt,sec_fenInt);
+		int fenMu = fir_fenInt * sec_fenInt / maxTemp;
+		int he = firInt * sec_fenInt / maxTemp + secInt * fir_fenInt / maxTemp;
+		System.out.println(jia + " " + firInt % fir_fenInt + "/" + maxTemp1);		
+		
+	}
+	
+	public static int maxNum(int fir,int sec){
+		if(fir < sec){
+			int temp = fir ;
+			fir = sec;
+			sec = temp;
+		}
+		while(fir % sec != 0){
+			fir = sec;
+			sec = fir % sec;
+		}
+		return sec;
+	}
+
+}

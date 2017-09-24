@@ -1,0 +1,41 @@
+package pat;
+
+import java.util.Scanner;
+
+public class P1023 {
+
+	public static void main(String[] args) {
+        // TODO 自动生成的方法存根
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.next();
+        String str2=sc.next();
+        //boolean isShift=true;
+        if(str1.indexOf('+')!=-1){
+            //isShift=false;
+             str2=str2.replaceAll("[A-Z]","");
+             str1=str1.replaceAll("\\+","");
+        }
+        //System.out.println(str1+" "+str2);
+        char[] arrc=str1.toCharArray();
+        for(int i=0;i<arrc.length;i++){
+            char c=arrc[i];
+            String temp=Character.toString(c);
+            if(temp.equals(".")){
+                temp="\\.";
+            }else{
+                String temp1=temp.toLowerCase();
+                str2=str2.replaceAll(temp1, "");
+            }
+            //System.out.println(temp);
+            str2=str2.replaceAll(temp, "");
+              
+            //System.out.println(str2);
+        }
+        if(str2.equals("")){
+            System.out.print(" ");
+        }else{
+            System.out.print(str2);
+        }
+    }
+  
+}

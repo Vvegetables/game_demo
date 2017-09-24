@@ -1,0 +1,21 @@
+package pat;
+
+import java.util.Scanner;
+
+public class P1021 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int count = sc.nextInt();
+		String[] valid = new String[count];
+		int validCount = 0;
+		int[] encpty = {7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2};
+		char[] check = {1,0,'X',9,8,7,6,5,4,3,2};
+		for(int i = 0; i < count; i++){
+			
+		}
+
+	}
+
+}

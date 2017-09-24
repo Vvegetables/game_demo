@@ -1,0 +1,43 @@
+package pat;
+
+import java.util.Scanner;
+
+/**
+ * String -> int(Integer.parse(String))
+ * @author home
+ *
+ */
+
+public class P1024 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		String first = sc.nextLine();
+		String second = sc.nextLine();
+		String[] firstF = first.split("/");
+		String[] secondF = second.split("/");
+		
+		//第一个数字的最简形式
+		int jia = Integer.parseInt(firstF[0]) / Integer.parseInt(firstF[1]);
+		int fen = Integer.parseInt(firstF[0]) % Integer.parseInt(firstF[1]);
+		//第二个数字的最简形式
+		int jia2 = Integer.parseInt(secondF[0]) / Integer.parseInt(secondF[1]);
+		int fen2 = Integer.parseInt(secondF[0]) % Integer.parseInt(secondF[1]);
+		
+	}
+	
+	public static int maxNum(int fir,int sec){
+		if(fir < sec){
+			int temp = fir ;
+			fir = sec;
+			sec = temp;
+		}
+		while(fir % sec != 0){
+			fir = sec;
+			sec = fir % sec;
+		}
+		return sec;
+	}
+
+}

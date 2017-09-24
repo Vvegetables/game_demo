@@ -1,0 +1,36 @@
+package pat;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class P1018 {
+
+	public static void main(String[] args) throws ParseException {
+		Scanner sc = new Scanner(System.in);
+		//String date1 = sc.nextLine();
+		String date2 = sc.nextLine();
+		System.out.println(getMonthSpace(date2));
+		
+
+	}
+	
+	public static int getMonthSpace(String date2) 
+			throws ParseException{
+		
+		String date1 = "2014-09-06";
+		String min = "1814-09-06";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		
+		Date c1 = sdf.parse(date1);
+		Date c2 = sdf.parse(date2);
+		Date c3 = sdf.parse(min);
+		int max = (int)(c1.getTime() - c3.getTime()) / (1000*3600*24);
+		int days = (int)(c1.getTime() - c2.getTime()) / (1000*3600*24);
+		System.out.println("days:" + days + "max:"+max);
+		return days <= 0 || days >= max? 0: days;
+	}
+
+}
